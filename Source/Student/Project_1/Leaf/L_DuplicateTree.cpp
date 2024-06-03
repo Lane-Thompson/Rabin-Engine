@@ -4,12 +4,12 @@
 
 void L_DuplicateTree::on_enter ()
 {
-	int childrenCount = RNG::d6();
+	int childrenCount = RNG::d3();
 
-	for (int i = 0; i < childrenCount; i++)
+	for (int i = 0; i < childrenCount; i++) // Spawn children in random positions near tree
 	{
 		float angle = RNG::range(0, 360) * PI/180;
-		int distance = RNG::range(10, 40);
+		int distance = RNG::range(8, 25);
 
 		auto child = agents->create_behavior_agent("Tree", BehaviorTreeTypes::Sapling, Agent::AgentModel::Tree);
 
