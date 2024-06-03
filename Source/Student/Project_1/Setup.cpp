@@ -5,8 +5,7 @@
 void ProjectOne::setup()
 {
     // Create an agent (using the default "Agent::AgentModel::Man" model)
-    auto man = agents->create_behavior_agent("ExampleAgent", BehaviorTreeTypes::Example);
-
+    //auto man = agents->create_behavior_agent("ExampleAgent", BehaviorTreeTypes::Example);
     // You can change properties here or at runtime from a behavior tree leaf node
     // Look in Agent.h for all of the setters, like these:
     // man->set_color(Vec3(1, 0, 1));
@@ -26,11 +25,12 @@ void ProjectOne::setup()
     Agent::add_model("Assets\\ball.sdkmesh", Agent::AgentModel::Ball);
     Agent::add_model("Assets\\hut.sdkmesh", Agent::AgentModel::Hut);
     // 3. Create the agent, giving it the correct AgentModel type.
-    auto tree = agents->create_behavior_agent("ExampleAgent2", BehaviorTreeTypes::Example, Agent::AgentModel::Tree);
+    auto tree = agents->create_behavior_agent("Tree", BehaviorTreeTypes::Sapling, Agent::AgentModel::Tree);
     // 4. (optional) You can also set the pitch of the model, if you want it to be rotated differently
     tree->set_pitch(PI / 2);
     // 5. (optional) Set other aspects to make it start out correctly
     tree->set_color(Vec3(0, 0.5, 0));   // Set the tree to green
+    tree->set_position(Vec3(50, 0, 50));
 
     // You can technically load any map you want, even create your own map file,
     // but behavior agents won't actually avoid walls or anything special, unless you code
@@ -44,8 +44,8 @@ void ProjectOne::setup()
 
     // Camera position can be modified from this default
     auto camera = agents->get_camera_agent();
-    camera->set_position(Vec3(-62.0f, 70.0f, terrain->mapSizeInWorld * 0.5f));
-    camera->set_pitch(0.610865); // 35 degrees
+    camera->set_position(Vec3(-62.0f, 100.0f, terrain->mapSizeInWorld * 0.5f));
+    camera->set_pitch(0.72); // 35 degrees
 
     // Sound control (these sound functions can be kicked off in a behavior tree node - see the example in L_PlaySound.cpp)
     audioManager->SetVolume(0.5f);

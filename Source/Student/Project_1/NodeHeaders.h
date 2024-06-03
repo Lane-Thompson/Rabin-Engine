@@ -17,6 +17,7 @@
 #include "Decorator/D_RepeatFourTimes.h"
 
 // Student Decorator Nodes
+#include "Decorator/D_InvertResult.h"
 
 
 // Example Leaf Nodes
@@ -28,3 +29,8 @@
 #include "Leaf/L_PlaySound.h"
 
 // Student Leaf Nodes
+#include "Leaf/L_Grow.h"
+#include "Leaf/L_Age.h"
+#include "Leaf/L_TreeDeath.h"
+#include "Leaf/L_DestroyAgent.h"
+#include "Leaf/L_DuplicateTree.h"
