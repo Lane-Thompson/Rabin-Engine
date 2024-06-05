@@ -7,12 +7,11 @@ L_Grow::L_Grow() : age(0.0f), deltaGrowth(0.f)
 void L_Grow::on_enter()
 {
     auto& bb = agent->get_blackboard();
-    float adult_age = RNG::range(10.0f, 25.0f);
-    bb.set_value<float>("adult_age", adult_age);
-    float startScale = 0.2f;
-    float adultScale = 1.5f;
-    agent->set_scaling(startScale);
-    deltaGrowth = (adultScale - startScale) / adult_age;
+    const float adult_age = bb.get_value<float>("adult_age");
+    const float start_scale = bb.get_value<float>("start_scale");
+    const float adult_scale = bb.get_value<float>("adult_scale");
+    agent->set_scaling(start_scale);
+    deltaGrowth = (adult_scale - start_scale) / adult_age;
     BehaviorNode::on_leaf_enter();
 }
 

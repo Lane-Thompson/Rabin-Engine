@@ -7,4 +7,5 @@ void L_TreeDeath::on_enter()
 	agent->set_pitch(0);
 	BehaviorNode::on_leaf_enter();
 	on_success();
+	display_leaf_text();
 }

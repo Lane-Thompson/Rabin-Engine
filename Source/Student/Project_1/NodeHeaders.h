@@ -18,6 +18,10 @@
 
 // Student Decorator Nodes
 #include "Decorator/D_InvertResult.h"
+#include "Decorator/D_EnoughTrees.h"
+#include "Decorator/D_IsValidTarget.h"
+#include "Decorator/D_AlwaysSuccess.h"
+#include "Decorator/D_ChoppedEnough.h"
 
 
 // Example Leaf Nodes
@@ -34,3 +38,10 @@
 #include "Leaf/L_TreeDeath.h"
 #include "Leaf/L_DestroyAgent.h"
 #include "Leaf/L_DuplicateTree.h"
+#include "Leaf/L_MoveHome.h"
+#include "Leaf/L_SetNearestTarget.h"
+#include "Leaf/L_MoveToTarget.h"
+#include "Leaf/L_Disappear.h"
+#include "Leaf/L_Appear.h"
+#include "Leaf/L_ChopTree.h"
+#include "Leaf/L_SpawnLumberjack.h"

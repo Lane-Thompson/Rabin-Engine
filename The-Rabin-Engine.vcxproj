@@ -181,6 +181,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_SpawnLumberjack.h" />
+    <ClInclude Include="Source\Student\Project_1\Decorator\D_ChoppedEnough.h" />
+    <ClInclude Include="Source\Student\Project_1\Decorator\D_AlwaysSuccess.h" />
+    <ClInclude Include="Source\Student\Project_1\Decorator\D_IsValidTarget.h" />
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_ChopTree.h" />
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_SetNearestTarget.h" />
+    <ClInclude Include="Source\Student\Project_1\Decorator\D_EnoughTrees.h" />
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_Appear.h" />
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_Disappear.h" />
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_MoveHome.h" />
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_MoveToTarget.h" />
     <ClInclude Include="Source\Student\Project_1\Leaf\L_DuplicateTree.h" />
     <ClInclude Include="Source\Framework\Agent\Agent.h" />
     <ClInclude Include="Source\Framework\Agent\AgentOrganizer.h" />
@@ -271,6 +282,17 @@
     <ClInclude Include="Source\Student\Project_2\P2_Pathfinding.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_SpawnLumberjack.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Decorator\D_ChoppedEnough.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Decorator\D_AlwaysSuccess.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Decorator\D_IsValidTarget.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_ChopTree.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_SetNearestTarget.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Decorator\D_EnoughTrees.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_Appear.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_Disappear.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_MoveHome.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_MoveToTarget.cpp" />
     <ClCompile Include="Source\Student\Project_1\Leaf\L_DuplicateTree.cpp" />
     <ClCompile Include="Source\Framework\Agent\Agent.cpp" />
     <ClCompile Include="Source\Framework\Agent\AgentOrganizer.cpp" />
