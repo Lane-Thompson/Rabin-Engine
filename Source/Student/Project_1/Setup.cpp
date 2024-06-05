@@ -28,7 +28,7 @@ void ProjectOne::setup()
     manBB.set_value("chop_speed", chop_speed);
     manBB.set_value("chop_time", chop_time);
 
-    int spawn_requirement = 5;
+    int spawn_requirement = 2;
     manBB.set_value("spawn_requirement", spawn_requirement);
     manBB.set_value("trees_chopped", 0);
     
