@@ -28,7 +28,7 @@ void ProjectOne::setup()
     manBB.set_value("chop_speed", chop_speed);
     manBB.set_value("chop_time", chop_time);
 
-    int spawn_requirement = 2;
+    int spawn_requirement = 3;
     manBB.set_value("spawn_requirement", spawn_requirement);
     manBB.set_value("trees_chopped", 0);
     
@@ -36,7 +36,7 @@ void ProjectOne::setup()
     man->set_scaling(0.f);
 
     ///// Home /////
-    auto home = agents->create_behavior_agent("Home", BehaviorTreeTypes::Idle, Agent::AgentModel::Hut);
+    auto home = agents->create_behavior_agent("Home", BehaviorTreeTypes::Home, Agent::AgentModel::Hut);
     home->set_scaling(Vec3(0.5));
     home->set_yaw(PI);
     home->set_position(Vec3(3.75, 0, 1));
@@ -70,6 +70,8 @@ void ProjectOne::setup()
     float death_age = RNG::range(death_age_range.x, death_age_range.y);
     float start_scale = 0.2f;
     float adult_scale = 1.5f;
+    float   color_range = 40;
+
     treeBB.set_value("adult_age_range",     adult_age_range);
     treeBB.set_value("adult_age",           adult_age);
     treeBB.set_value("adult_growth_rate",   adult_growth_rate);
@@ -77,8 +79,14 @@ void ProjectOne::setup()
     treeBB.set_value("adult_scale",         adult_scale);
     treeBB.set_value("death_age_range",     death_age_range);
     treeBB.set_value("death_age",           death_age);
+    treeBB.set_value("min_spawn",           5);
+    treeBB.set_value("max_spawn",           6);
+    treeBB.set_value("color_range",         color_range);
 
     
+    auto bird = agents->create_behavior_agent("Tree", BehaviorTreeTypes::Bird, Agent::AgentModel::Bird);
+    bird->set_position(Vec3(50, 10, 50));
+    bird->set_scaling(.01);
     // You can technically load any map you want, even create your own map file,
     // but behavior agents won't actually avoid walls or anything special, unless you code
     // that yourself (that's the realm of project 2)

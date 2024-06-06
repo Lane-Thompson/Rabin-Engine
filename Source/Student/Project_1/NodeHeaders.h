@@ -45,3 +45,6 @@
 #include "Leaf/L_Appear.h"
 #include "Leaf/L_ChopTree.h"
 #include "Leaf/L_SpawnLumberjack.h"
+#include "Leaf/L_SetRandomTarget.h"
+#include "Leaf/L_GetRandomPosition.h"
+#include "Leaf/L_MoveToTargetPosition.h"

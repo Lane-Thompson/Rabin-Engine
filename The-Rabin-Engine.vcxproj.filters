@@ -363,6 +363,9 @@
     <ClInclude Include="Source\Student\Project_1\Decorator\D_AlwaysSuccess.h" />
     <ClInclude Include="Source\Student\Project_1\Decorator\D_ChoppedEnough.h" />
     <ClInclude Include="Source\Student\Project_1\Leaf\L_SpawnLumberjack.h" />
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_SetRandomTarget.h" />
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_GetRandomPosition.h" />
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_MoveToTargetPosition.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Framework\Main.cpp">
@@ -630,6 +633,9 @@
     <ClCompile Include="Source\Student\Project_1\Decorator\D_AlwaysSuccess.cpp" />
     <ClCompile Include="Source\Student\Project_1\Decorator\D_ChoppedEnough.cpp" />
     <ClCompile Include="Source\Student\Project_1\Leaf\L_SpawnLumberjack.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_SetRandomTarget.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_GetRandomPosition.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_MoveToTargetPosition.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />
