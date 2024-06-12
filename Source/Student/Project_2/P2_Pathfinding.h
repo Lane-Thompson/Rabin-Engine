@@ -1,5 +1,8 @@
 #pragma once
 #include "Misc/PathfindingDetails.hpp"
+#include "Node.h"
+#include "OpenList.h"
+#include "UnorderedFastArray.h"
 
 class AStarPather
 {
@@ -9,6 +12,9 @@ public:
         If needed, you can modify the framework where the class is constructed in the
         initialize functions of ProjectTwo and ProjectThree.
     */
+
+    AStarPather();
+    ~AStarPather();
 
     /* ************************************************** */
     // DO NOT MODIFY THESE SIGNATURES
@@ -22,5 +28,23 @@ public:
         It doesn't all need to be in this header and cpp, structure it whatever way
         makes sense to you.
     */
+    void FormPath(Node goalNode, PathRequest request);
+
+    float ComputeHeuristicCost(GridPos start, GridPos goal, Heuristic heuristic);
+    float Octile(GridPos start, GridPos goal);
+    float Euclidean(GridPos start, GridPos goal);
+    float Manhattan(GridPos start, GridPos goal);
+    float Chebyshev(GridPos start, GridPos goal);
+    float Inconsistent(GridPos start, GridPos goal);
+
+    void PreCheckForValidNeighbors();
+
+    UnorderedFastArray openList;
+
+    Node grid[40][40];
+    bool preprocessing;
+
+    GridPos start;
+    GridPos goal;
 
 };
