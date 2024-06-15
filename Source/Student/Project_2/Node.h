@@ -8,9 +8,11 @@ public:
 	Node();
 	Node(int x, int y, float hCost, Node* parent = nullptr);
 	Node(GridPos pos, float hCost, Node* parent = nullptr);
-	unsigned int DistanceToParent();
-	bool operator==(Node& that);
-	bool operator==(GridPos& that);
+	void CalculateValues(float hCost, Node* parent = nullptr);
+	float DistanceToParent() const;
+	bool operator==(Node& that) const;
+	bool operator==(GridPos& that) const;
+	GridPos GetGridPos() const;
 
 	Node* parent;
 	float finalCost;

@@ -1,7 +1,6 @@
 #pragma once
 #include "Misc/PathfindingDetails.hpp"
 #include "Node.h"
-#include "OpenList.h"
 #include "UnorderedFastArray.h"
 
 class AStarPather
@@ -14,7 +13,7 @@ public:
     */
 
     AStarPather();
-    ~AStarPather();
+    //~AStarPather();
 
     /* ************************************************** */
     // DO NOT MODIFY THESE SIGNATURES
@@ -28,9 +27,9 @@ public:
         It doesn't all need to be in this header and cpp, structure it whatever way
         makes sense to you.
     */
-    void FormPath(Node goalNode, PathRequest request);
+    void FormPath(Node goalNode, PathRequest& request);
 
-    float ComputeHeuristicCost(GridPos start, GridPos goal, Heuristic heuristic);
+    float ComputeHeuristicCost(GridPos start, GridPos goal, Heuristic heuristic, float weight);
     float Octile(GridPos start, GridPos goal);
     float Euclidean(GridPos start, GridPos goal);
     float Manhattan(GridPos start, GridPos goal);
@@ -46,5 +45,6 @@ public:
 
     GridPos start;
     GridPos goal;
+    bool debug_prints;
 
 };
