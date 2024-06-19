@@ -27,14 +27,19 @@ public:
         It doesn't all need to be in this header and cpp, structure it whatever way
         makes sense to you.
     */
-    void FormPath(Node goalNode, PathRequest& request);
+    void FormPath               (Node goalNode, PathRequest& request);
+    void RubberbandPath         (WaypointList& path);
+    void AddIntermediatePoints  (WaypointList& path);
+    void SmoothPath             (WaypointList& path);
 
-    float ComputeHeuristicCost(GridPos start, GridPos goal, Heuristic heuristic, float weight);
-    float Octile(GridPos start, GridPos goal);
-    float Euclidean(GridPos start, GridPos goal);
-    float Manhattan(GridPos start, GridPos goal);
-    float Chebyshev(GridPos start, GridPos goal);
-    float Inconsistent(GridPos start, GridPos goal);
+    float ComputeHeuristicCost  (GridPos start, GridPos goal, Heuristic heuristic, float weight);
+    float Octile                (GridPos start, GridPos goal);
+    float Euclidean             (GridPos start, GridPos goal);
+    float Manhattan             (GridPos start, GridPos goal);
+    float Chebyshev             (GridPos start, GridPos goal);
+    float Inconsistent          (GridPos start, GridPos goal);
+
+    byte CheckValidNeighbors(int parentCol, int parentRow);
 
     void PreCheckForValidNeighbors();
 
@@ -45,6 +50,4 @@ public:
 
     GridPos start;
     GridPos goal;
-    bool debug_prints;
-
 };

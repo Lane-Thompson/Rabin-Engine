@@ -15,7 +15,7 @@ Node* UnorderedFastArray::Pop()
 		return list[0];
 	}
 	float bestCost = INFINITY;
-	unsigned int bestIndex;
+	unsigned int bestIndex = 0;
 	for (int i = 0; i < index + 1; ++i)		// Brute force loop to find best node
 	{
 		if (list[i]->finalCost < bestCost)
@@ -30,7 +30,6 @@ Node* UnorderedFastArray::Pop()
 		list[bestIndex] = list[index];			// Move the last node to empty space
 	}
 	--index;
-	bestNode->listStatus = ListStatus::Closed;
 	return bestNode;
 }
 
@@ -39,22 +38,11 @@ Node* UnorderedFastArray::Pop()
 /// </summary>
 void UnorderedFastArray::Push(Node* node)
 {
+	//if (Size() > mostNodes) mostNodes = Size();
 	index++;
-	node->listStatus = ListStatus::Open;
 	list[index] = node;
 }
 
-//void UnorderedFastArray::Push(int x, int y, float hCost, Node* parent)
-//{
-//	index++;
-//
-//	Node node = list[index];
-//	node.xPos = x;
-//	node.yPos = y;
-//	float distanceToParent = x != parent->xPos && y != parent->yPos ? sqrt2 : 1;
-//	if (parent != nullptr) node.givenCost = parent->givenCost + distanceToParent;
-//	node.finalCost = node.givenCost + hCost;
-//}
 void UnorderedFastArray::Remove(Node* nodeToRemove)
 {
 	if (Size() == 1)

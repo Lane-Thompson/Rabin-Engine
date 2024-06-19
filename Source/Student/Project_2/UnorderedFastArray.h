@@ -4,8 +4,9 @@ class UnorderedFastArray :
     public OpenList
 {
 private:
-	Node* list[800];
+	Node* list[400];
 	int index = -1;
+	//int mostNodes = 0;
 
 public:
 	Node* Pop();
@@ -14,5 +15,6 @@ public:
 	void Remove(int i);
 	void Clear();
 	int  Size() const;
+	//void PrintMostNodes() const { printf("Most nodes in OpenList: %d\n", mostNodes); }
 };
 
