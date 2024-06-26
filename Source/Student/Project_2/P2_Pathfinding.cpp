@@ -147,8 +147,8 @@ PathResult AStarPather::compute_path(PathRequest &request)
         if (request.settings.debugColoring) terrain->set_color(parentNode->GetGridPos(), Colors::Yellow);
         // for all neighboring child nodes
         int index = 1;
-        for (int colChange = -1; colChange < 2; ++colChange)
         for (int rowChange = -1; rowChange < 2; ++rowChange)
+        for (int colChange = -1; colChange < 2; ++colChange)
         {
             if (colChange == 0 && rowChange == 0) continue;    // If both are 0, it's self. skip
             if (~parentNode->validNeighbors & index) // if not a valid neighbor, skip
@@ -400,8 +400,8 @@ byte AStarPather::CheckValidNeighbors(int parentCol, int parentRow)
     if (terrain->is_wall(parentRow,parentCol)) return 0;
     byte index = 1;
     byte validNeighbors = 0;
-    for (int col = -1; col < 2; ++col)
     for (int row = -1; row < 2; ++row)
+    for (int col = -1; col < 2; ++col)
     {
         if (col == 0 && row == 0) continue;     // Don't check self
         bool valid = true;

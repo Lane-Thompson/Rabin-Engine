@@ -2,6 +2,7 @@
 #include "Misc/PathfindingDetails.hpp"
 #include "Node.h"
 #include "UnorderedFastArray.h"
+#include "BucketList.h"
 
 class AStarPather
 {

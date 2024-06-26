@@ -43,17 +43,22 @@ void UnorderedFastArray::Push(Node* node)
 	list[index] = node;
 }
 
-void UnorderedFastArray::Remove(Node* nodeToRemove)
+bool UnorderedFastArray::Remove(Node* nodeToRemove)
 {
 	if (Size() == 1)
 	{
 		Pop();
-		return;
+		return true;
 	}
 	for (int i = 0; i < Size(); ++i)
 	{
-		if (list[i] == nodeToRemove) Remove(i);
+		if (list[i] == nodeToRemove)
+		{
+			Remove(i);
+			return true;
+		}
 	}
+	return false;
 }
 
 void UnorderedFastArray::Remove(int i)
