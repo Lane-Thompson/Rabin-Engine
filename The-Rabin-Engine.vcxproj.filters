@@ -355,17 +355,42 @@
     <ClInclude Include="Source\Student\Project_1\Leaf\L_MoveHome.h">
       <Filter>Source\Student\Project_1\Leaf</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Student\Project_1\Leaf\L_SetNearestTarget.h" />
     <ClInclude Include="Source\Student\Project_1\Leaf\L_ChopTree.h">
       <Filter>Source\Student\Project_1\Leaf</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Student\Project_1\Decorator\D_IsValidTarget.h" />
-    <ClInclude Include="Source\Student\Project_1\Decorator\D_AlwaysSuccess.h" />
-    <ClInclude Include="Source\Student\Project_1\Decorator\D_ChoppedEnough.h" />
-    <ClInclude Include="Source\Student\Project_1\Leaf\L_SpawnLumberjack.h" />
-    <ClInclude Include="Source\Student\Project_1\Leaf\L_SetRandomTarget.h" />
-    <ClInclude Include="Source\Student\Project_1\Leaf\L_GetRandomPosition.h" />
-    <ClInclude Include="Source\Student\Project_1\Leaf\L_MoveToTargetPosition.h" />
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_SpawnLumberjack.h">
+      <Filter>Source\Student\Project_1\Leaf</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_GetRandomPosition.h">
+      <Filter>Source\Student\Project_1\Leaf</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_MoveToTargetPosition.h">
+      <Filter>Source\Student\Project_1\Leaf</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_SetNearestTarget.h">
+      <Filter>Source\Student\Project_1\Leaf</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Student\Project_1\Leaf\L_SetRandomTarget.h">
+      <Filter>Source\Student\Project_1\Leaf</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Student\Project_1\Decorator\D_IsValidTarget.h">
+      <Filter>Source\Student\Project_1\Decorator</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Student\Project_1\Decorator\D_AlwaysSuccess.h">
+      <Filter>Source\Student\Project_1\Decorator</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Student\Project_1\Decorator\D_ChoppedEnough.h">
+      <Filter>Source\Student\Project_1\Decorator</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Student\Project_2\Node.h">
+      <Filter>Source\Student\Project_2</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Student\Project_2\OpenList.h">
+      <Filter>Source\Student\Project_2</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Student\Project_2\UnorderedFastArray.h">
+      <Filter>Source\Student\Project_2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Framework\Main.cpp">
@@ -629,13 +654,36 @@
     <ClCompile Include="Source\Student\Project_1\Leaf\L_ChopTree.cpp">
       <Filter>Source\Student\Project_1\Leaf</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Student\Project_1\Decorator\D_IsValidTarget.cpp" />
-    <ClCompile Include="Source\Student\Project_1\Decorator\D_AlwaysSuccess.cpp" />
-    <ClCompile Include="Source\Student\Project_1\Decorator\D_ChoppedEnough.cpp" />
-    <ClCompile Include="Source\Student\Project_1\Leaf\L_SpawnLumberjack.cpp" />
-    <ClCompile Include="Source\Student\Project_1\Leaf\L_SetRandomTarget.cpp" />
-    <ClCompile Include="Source\Student\Project_1\Leaf\L_GetRandomPosition.cpp" />
-    <ClCompile Include="Source\Student\Project_1\Leaf\L_MoveToTargetPosition.cpp" />
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_GetRandomPosition.cpp">
+      <Filter>Source\Student\Project_1\Leaf</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_MoveToTargetPosition.cpp">
+      <Filter>Source\Student\Project_1\Leaf</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_SetRandomTarget.cpp">
+      <Filter>Source\Student\Project_1\Leaf</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Student\Project_1\Leaf\L_SpawnLumberjack.cpp">
+      <Filter>Source\Student\Project_1\Leaf</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Student\Project_1\Decorator\D_AlwaysSuccess.cpp">
+      <Filter>Source\Student\Project_1\Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Student\Project_1\Decorator\D_ChoppedEnough.cpp">
+      <Filter>Source\Student\Project_1\Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Student\Project_1\Decorator\D_IsValidTarget.cpp">
+      <Filter>Source\Student\Project_1\Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Student\Project_2\Node.cpp">
+      <Filter>Source\Student\Project_2</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Student\Project_2\OpenList.cpp">
+      <Filter>Source\Student\Project_2</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Student\Project_2\UnorderedFastArray.cpp">
+      <Filter>Source\Student\Project_2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />
@@ -673,9 +721,6 @@
       <Filter>Source\Student\Project_1</Filter>
     </None>
     <None Include="packages.config" />
-    <None Include="Source\Student\Project_1\Trees\Example.bht" />
-    <None Include="Source\Student\Project_1\Trees\Idle.bht" />
-    <None Include="Source\Student\Project_1\Trees\Sapling.bht" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Source\Framework\Rendering\GridCellPixelShader.hlsl">

@@ -282,7 +282,10 @@
     <ClInclude Include="Source\Student\Project_1\Leaf\L_PlaySound.h" />
     <ClInclude Include="Source\Student\Project_1\Leaf\L_TreeDeath.h" />
     <ClInclude Include="Source\Student\Project_1\NodeHeaders.h" />
+    <ClInclude Include="Source\Student\Project_2\Node.h" />
+    <ClInclude Include="Source\Student\Project_2\OpenList.h" />
     <ClInclude Include="Source\Student\Project_2\P2_Pathfinding.h" />
+    <ClInclude Include="Source\Student\Project_2\UnorderedFastArray.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Student\Project_1\Leaf\L_MoveToTargetPosition.cpp" />
@@ -382,7 +385,10 @@
     <ClCompile Include="Source\Student\Project_1\Leaf\L_PlaySound.cpp" />
     <ClCompile Include="Source\Student\Project_1\Leaf\L_TreeDeath.cpp" />
     <ClCompile Include="Source\Student\Project_1\Setup.cpp" />
+    <ClCompile Include="Source\Student\Project_2\Node.cpp" />
+    <ClCompile Include="Source\Student\Project_2\OpenList.cpp" />
     <ClCompile Include="Source\Student\Project_2\P2_Pathfinding.cpp" />
+    <ClCompile Include="Source\Student\Project_2\UnorderedFastArray.cpp" />
     <ClCompile Include="Source\Student\Project_3\P3_TerrainAnalysis.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -413,9 +419,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </None>
-    <None Include="Source\Student\Project_1\Trees\Example.bht" />
-    <None Include="Source\Student\Project_1\Trees\Idle.bht" />
-    <None Include="Source\Student\Project_1\Trees\Sapling.bht" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Source\Framework\Rendering\GridCellPixelShader.hlsl">
